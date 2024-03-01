@@ -52,36 +52,70 @@
             </div>
             <hr class="my-3">
             <span class="text-slate-400 font-medium">Today</span>
-            <div class="flex flex-row w-full mt-6">
-                <a href="" class="w-20">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
-                </a>
-                <div class="flex flex-col w-full">
-                    <a href="">Erlang Andriyanputra</a>
-                    <small class="text-slate-400">12/09/2024</small>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ea illo. Sed placeat eveniet dolore?</p>
+            <div class="flex flex-col w-full">
+                <div class="flex flex-row w-full mt-6">
+                    <a href="" class="w-20">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
+                    </a>
+                    <div class="flex flex-col w-full">
+                        <a href="">Erlang Andriyanputra</a>
+                        <small class="text-slate-400">12/09/2024</small>
+                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ea illo. Sed placeat eveniet dolore?</p>
+                    </div>
+                </div>
+                <div class="flex flex-row w-full mt-6">
+                    <a href="" class="w-20">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
+                    </a>
+                    <div class="flex flex-col w-full">
+                        <a href="">Erlang Andriyanputra</a>
+                        <small class="text-slate-400">12/09/2024</small>
+                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ea illo. Sed placeat eveniet dolore?</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bg-white w-full h-max rounded-3xl p-6 mb-6 shadow-md">
-            <span class="text-slate-400 font-medium">Log Activitity Recent</span>
-            <div class="w-full flex flex-col gap-3 mt-6 font-medium text-slate-500">
-                <p>
-                    <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
-                    has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
-                </p>    
-                <p>
-                    <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
-                    has approved the request of company <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
-                </p>    
-                <p>
-                    <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
-                    has approved the request of company <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
-                </p>    
-                <p>
-                    <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
-                    has approved the request of company <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
-                </p>    
+            <div class="flex flex-row justify-end lg:justify-between">
+                <span class="text-slate-400 font-medium mb-4">Log Activitity Recent</span>
+            </div>
+            <hr class="my-3">   
+            <div class="w-full flex flex-col gap-3 mt-6 font-medium text-slate-400 bg-slate-800 p-3 rounded-xl">
+                <div class="flex flex-col">
+                    <p>
+                        <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
+                        has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
+                    </p>    
+                    <small class="text-slate-400">03/05/2023</small>
+                </div>
+                <div class="flex flex-col">
+                    <p>
+                        <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
+                        has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
+                    </p>    
+                    <small class="text-slate-400">03/05/2023</small>
+                </div>
+                <div class="flex flex-col">
+                    <p>
+                        <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
+                        has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
+                    </p>    
+                    <small class="text-slate-400">03/05/2023</small>
+                </div>
+                <div class="flex flex-col">
+                    <p>
+                        <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
+                        has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
+                    </p>    
+                    <small class="text-slate-400">03/05/2023</small>
+                </div>
+                <div class="flex flex-col">
+                    <p>
+                        <a href="" class="text-sky-500 hover:text-sky-400 hover:duration-150">Erlang Andriyanputra</a> 
+                        has approved the request of company <a href="" class="  text-sky-500 hover:text-sky-400 hover:duration-150">Pt.Dirga Wijaya</a>.
+                    </p>    
+                    <small class="text-slate-400">03/05/2023</small>
+                </div>
             </div>
         </div>
     </div>
