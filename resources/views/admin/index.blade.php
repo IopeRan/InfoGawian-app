@@ -7,7 +7,7 @@
     </div>
     <h5 class="my-4 text-xl font-medium lg:text-2xl lg:my-8">Dashboard</h5>
     <div class="flex flex-col gap-6 pb-6 lg:flex-row">
-        <a href="" class="bg-white w-full h-max rounded-3xl shadow-md hover:-translate-y-2 hover:duration-150 overflow-hidden">
+        <a href="/admin/dashboard/user" class="bg-white w-full h-max rounded-3xl shadow-md hover:-translate-y-2 hover:duration-150 overflow-hidden">
             <div class="px-6 pt-6">
                 <div class="flex flex-row justify-between ">
                     <i class="lg:text-2xl fa-solid fa-users text-xl text-sky-500"></i>

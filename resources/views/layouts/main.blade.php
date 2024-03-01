@@ -10,10 +10,10 @@
 </head>
 <body class="bg-sky-50">
     <div id="overlay" class="hidden fixed inset-0 bg-black opacity-50"></div>
-    @include('partials.admin.navbar')
+    {{-- @include('partials.admin.navbar') --}}
     <div class="w-full h-screen flex flex-row pb-4">
         {{-- @include('partials.admin.sidebar') --}}
-        <div class="w-full flex flex-col p-6" id="container">
+        <div class="w-full flex flex-col p-6 mb-6" id="container">
             @yield('container')
         </div>
         @include('partials.admin.posts.create')
