@@ -48,7 +48,7 @@
         <div class="bg-white w-full h-max rounded-3xl p-6 shadow-md">
             <div class="flex flex-row justify-end lg:justify-between">
                 <h5 class="font-semibold text-slate-400 hidden lg:block">Announcement</h5>
-                <a href="" class="bg-teal-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-teal-400 hover:duration-150">Create a new post</a>
+                <button type="button" onclick="createPost()" class="bg-teal-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-teal-400 hover:duration-150">Create a new post</button>
             </div>
             <hr class="my-3">
             <span class="text-slate-400 font-medium">Today</span>
@@ -58,7 +58,10 @@
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
                     </a>
                     <div class="flex flex-col w-full">
-                        <a href="">Erlang Andriyanputra</a>
+                        <div class="flex flex-row justify-between">
+                            <a href="">Erlang Andriyanputra</a>
+                            <button><i class="fa-solid fa-ellipsis"></i></button>
+                        </div>
                         <small class="text-slate-400">12/09/2024</small>
                         <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ea illo. Sed placeat eveniet dolore?</p>
                     </div>
@@ -68,7 +71,10 @@
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
                     </a>
                     <div class="flex flex-col w-full">
-                        <a href="">Erlang Andriyanputra</a>
+                        <div class="flex flex-row justify-between">
+                            <a href="">Erlang Andriyanputra</a>
+                            <button><i class="fa-solid fa-ellipsis"></i></button>
+                        </div>
                         <small class="text-slate-400">12/09/2024</small>
                         <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ea illo. Sed placeat eveniet dolore?</p>
                     </div>

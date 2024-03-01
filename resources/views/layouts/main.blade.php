@@ -13,11 +13,17 @@
     @include('partials.admin.navbar')
     <div class="w-full h-screen flex flex-row pb-4">
         {{-- @include('partials.admin.sidebar') --}}
-        <div class="w-full flex flex-col p-6">
+        <div class="w-full flex flex-col p-6" id="container">
             @yield('container')
         </div>
+        @include('partials.admin.posts.create')
     </div>
+
+    {{-- <div class="w-ful h-screen flex p-6">
+        @include('partials.admin.posts.create')
+    </div> --}}
     
     <script src="{{ asset('js/navside.js') }}"></script>
+    <script src="{{ asset('js/createPost.js') }}"></script>
 </body>
 </html>
