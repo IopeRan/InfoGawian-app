@@ -38,17 +38,21 @@ class DashboardUserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(User $user)
+    public function show()
     {
-        //
+        return view('admin.users.actions.show', [
+            'title' => 'Show'
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $user)
+    public function edit()
     {
-        //
+        return view('admin.users.actions.edit', [
+            'title' => 'Edit'
+        ]);
     }
 
     /**

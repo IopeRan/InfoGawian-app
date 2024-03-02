@@ -81,7 +81,7 @@
                                 <i class="fa-solid fa-address-card"></i>
                                 <span class="hidden lg:inline">Show</span>
                             </a>
-                            <a href="/admin/dashboard/user/" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow hover:text-white hover:duration-150">
+                            <a href="/admin/dashboard/user/id/edit" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
                                 <i class="fa-solid fa-user-pen"></i>
                                 <span class="hidden lg:inline">Edit</span>
                             </a>
@@ -95,7 +95,7 @@
                         <td class="mt-3">2</td>
                         <td class="mt-3">EranDay</td>
                         <td class="flex flex-row justify-center gap-2 mt-3">
-                            <a href="/admin/dashboard/user/" class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
+                            <a href="/admin/dashboard/user/user" class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
                                 <i class="fa-solid fa-address-card"></i>
                                 <span class="hidden lg:inline">Show</span>
                             </a>

@@ -13,7 +13,7 @@
     {{-- @include('partials.admin.navbar') --}}
     <div class="w-full h-screen flex flex-row pb-4">
         {{-- @include('partials.admin.sidebar') --}}
-        <div class="w-full flex flex-col p-6 mb-6" id="container">
+        <div class="w-full h-max flex flex-col p-6 mb-6" id="container">
             @yield('container')
         </div>
         @include('partials.admin.posts.create')
