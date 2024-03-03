@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardCompanyController;
+use App\Http\Controllers\DashboardRequestController;
 use App\Http\Controllers\DashboardUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
 Route::resource('/admin/dashboard/user', DashboardUserController::class);
 
 Route::resource('/admin/dashboard/company', DashboardCompanyController::class);
+
+Route::resource('/admin/dashboard/request', DashboardRequestController::class);
 
 Route::middleware(['auth'])->group(function () {
 });

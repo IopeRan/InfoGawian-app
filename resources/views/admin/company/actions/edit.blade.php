@@ -25,6 +25,10 @@
                         <input type="text" id="phone" name="phone" placeholder="Phone" class="border px-3 py-2 rounded-lg outline-yellow-500">
                     </div>
                     <div class="flex flex-col">
+                        <label for="phone" class="text-slate-500"></label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone" class="border px-3 py-2 rounded-lg outline-yellow-500">
+                    </div>
+                    <div class="flex flex-col">
                         <label for="image" class="text-slate-500">Image</label>
                         <input type="hidden" id="oldImage" name="oldImage" value="">
                         <div>
