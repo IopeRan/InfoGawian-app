@@ -19,7 +19,7 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0ea5e9" fill-opacity="1" d="M0,64L60,96C120,128,240,192,360,202.7C480,213,600,171,720,165.3C840,160,960,192,1080,176C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         </a>
-        <a href="" class="bg-white w-full h-max rounded-3xl shadow-md hover:-translate-y-2 hover:duration-150 overflow-hidden">
+        <a href="/admin/dashboard/company" class="bg-white w-full h-max rounded-3xl shadow-md hover:-translate-y-2 hover:duration-150 overflow-hidden">
             <div class="px-6 pt-6">
                 <div class="flex flex-row justify-between ">
                     <i class="lg:text-2xl fa-solid fa-building text-xl text-green-500"></i>
