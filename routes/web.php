@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardCompanyController;
 use App\Http\Controllers\DashboardRequestController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
 
@@ -29,6 +26,8 @@ Route::resource('/admin/dashboard/user', DashboardUserController::class);
 Route::resource('/admin/dashboard/company', DashboardCompanyController::class);
 
 Route::resource('/admin/dashboard/request', DashboardRequestController::class);
+
+Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware(['auth'])->group(function () {
 });
