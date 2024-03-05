@@ -2,7 +2,18 @@
     <div class="">
         <h5 class="font-medium font-mono text-xl lg:text-2xl">InfoGawian.</h5>
     </div>
-    <div class="">
+    <div class="flex flex-row gap-10 justify-center items-center">
+        <ul class="hidden lg:flex flex-row gap-4">
+            <li>
+                <a href="/" class="text-light">Home</a>
+            </li>
+            <li>
+                <a href="/company" class="text-light">Company</a>
+            </li>
+            <li>
+                <a href="/worker">Workers</a>
+            </li>
+        </ul>
         <button onclick="profile()" class="flex flex-row gap-3 items-center">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-10 h-10 rounded-full">
             <div class="hidden lg:flex">
