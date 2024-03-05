@@ -11,7 +11,7 @@
                     <input type="text" class="bg-white border rounded-l-lg w-full px-3 py-2 outline-teal-500" placeholder="Name">
                     <button class="bg-teal-500 px-3 py-2 rounded-r-lg text-white font-medium hover:bg-teal-400 hover:duration-150"><i class="fa fa-solid fa-search"></i></button>
                 </form>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
+                <a href="/worker/worker" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
                     <div class="w-28 lg:w-max">
                         <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
                     </div>

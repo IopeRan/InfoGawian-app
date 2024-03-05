@@ -9,7 +9,16 @@ class WorkerController extends Controller
     public function index()
     {
         return view('workers.index', [
-            'title' => 'Worker'  
+            'title' => 'Worker',  
+            'active' => 'worker'
+        ]);
+    }
+
+    public function show()
+    {
+        return view('workers.show', [
+            'title' => 'Show',
+            'active' => 'worker'
         ]);
     }
 }

@@ -3,9 +3,12 @@
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardCompanyController;
+use App\Http\Controllers\DashboardCompanyUserController;
 use App\Http\Controllers\DashboardRequestController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkerController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,16 +25,19 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
-
 Route::resource('/admin/dashboard/user', DashboardUserController::class);
-
 Route::resource('/admin/dashboard/company', DashboardCompanyController::class);
-
 Route::resource('/admin/dashboard/request', DashboardRequestController::class);
 
 Route::get('/', [HomeController::class, 'index']);
 Route::resource('/company', CompanyController::class);
 Route::resource('/worker', WorkerController::class);
+Route::resource('/profile', ProfileController::class);
+
+Route::get('/message', [MessageController::class, 'admin']);
+Route::get('/message/company', [MessageController::class, 'company']);
+
+Route::get('/menu/company', [DashboardCompanyUserController::class, 'index']);
 
 Route::middleware(['auth'])->group(function () {
 });
