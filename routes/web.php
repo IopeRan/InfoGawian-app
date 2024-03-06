@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardCompanyController;
@@ -38,6 +39,9 @@ Route::get('/message', [MessageController::class, 'admin']);
 Route::get('/message/company', [MessageController::class, 'company']);
 
 Route::get('/menu/company', [DashboardCompanyUserController::class, 'index']);
+
+Route::get('/login', [AuthController::class, 'login']);
+Route::get('/registration', [AuthController::class, 'registration']);
 
 Route::middleware(['auth'])->group(function () {
 });

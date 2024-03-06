@@ -1,29 +1,23 @@
 @extends('layouts.auth')
 
-@section('auth')
-    <div style="width: 310px" class="card bg-light">
-        <div class="card-header">
-            <h5 class="text-center fw-bold">Info<span class="text-primary">Gawian</span>.</h5>
-        </div>
-        <div class="px-2 py-2 card-body">
-            <form action="" method="post">
-                @csrf
-                @method('post')
-                <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                </div>
-                <div class="flex justify-content-end">
-                    <button type="submit" class="btn btn-primary">Login</button>
+@section('container')
+    <div class="bg-white w-full h-max rounded-lg shadow-md overflow-hidden">
+        <div class="bg-teal-500 w-full h-4"></div>
+        <div class="p-3">
+            <h5 class="text-2xl font-medium font-mono text-center">Login</h5>
+            <hr class="my-3">
+            <form action="" class="flex flex-col gap-3">
+                <input type="text" class="px-3 py-1 w-full border rounded-lg " placeholder="Username" >
+                <input type="Password" class="px-3 py-1 w-full border rounded-lg " placeholder="Password" >
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-teal-500 px-3 py-2 rounded-lg text-white">Login</button>
                 </div>
             </form>
+            <hr class="my-3">
+            <p class="text-center text-sm font-light">
+                don't have an account? <a href="/registration" class="text-sky-500 hover:text-sky-400 hover:duration-150">create one</a>
+            </p>
         </div>
-        <div class="card-footer">
-            <p class="text-center">don't have an account? <a href="/registration" class="text-decoration-none">registration</a></p>
-        </div>
+        <div class="bg-teal-500 w-full h-4"></div>
     </div>
 @endsection
