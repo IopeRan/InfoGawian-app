@@ -7,18 +7,20 @@
             <hr>
             <div class="w-full px-6">
                 <h5 class="text-slate-500 font-medium text-lg">Create User</h5>
-                <form action="" class="w-full my-4 flex flex-col gap-3">
+                <form action="/admin/dashboard/user" method="post" class="w-full my-4 flex flex-col gap-3">
+                    @method('post')
+                    @csrf
                     <div class="flex flex-col">
                         <label for="fullname" class="text-slate-500">Fullname</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Fullname" class="border px-3 py-2 rounded-lg outline-teal-500">
+                        <input type="text" required id="fullname" name="fullname" placeholder="Fullname" class="border px-3 py-2 rounded-lg outline-teal-500">
                     </div>
                     <div class="flex flex-col">
                         <label for="username" class="text-slate-500">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Username" class="border px-3 py-2 rounded-lg outline-teal-500">
+                        <input type="text" required id="username" name="username" placeholder="Username" class="border px-3 py-2 rounded-lg outline-teal-500">
                     </div>
                     <div class="flex flex-col">
                         <label for="password" class="text-slate-500">Password</label>
-                        <input type="password" id="password" name="password" placeholder="password" class="border px-3 py-2 rounded-lg outline-teal-500">
+                        <input type="password" required id="password" name="password" placeholder="password" class="border px-3 py-2 rounded-lg outline-teal-500">
                     </div>
                     <div class="flex flex-row justify-between w-full">
                         <a href="/admin/dashboard/user" class="border border-red-500 text-red-500 px-4 py-2 rounded-xl hover:bg-red-500 hover:text-white hover:duration-150">Cancel</a>

@@ -58,7 +58,7 @@
     </div>
     <a href="/admin/dashboard" class="border border-teal-500 w-max h-max px-4 py-2 rounded-xl text-teal-500 font-medium hover:bg-teal-500 hover:text-white hover:duration-150">&laquo; Back Dashboard</a>
     <div class="flex flex-col gap-4 my-4 pb-6 lg:flex-row">
-        <div class="w-full h-max bg-white rounded-3xl px-3 py-2 shadow-md    lg:w-1/2">
+        <div class="w-full h-max bg-white rounded-3xl px-3 py-2 shadow-md lg:w-1/2">
             <h5 class="text-slate-500 text-lg font-medium">List Users</h5>
             <form action="" class="my-3">
                 <div class="flex flex-row">
@@ -73,42 +73,30 @@
                     <th>Action</th>
                 </thead>
                 <tbody class="">
+                    @foreach ($users as $user)                        
                     <tr>
-                        <td class="mt-3">1</td>
-                        <td class="mt-3">Chilliope</td>
+                        <td class="mt-3">{{ $loop->iteration }}</td>
+                        <td class="mt-3">{{ $user->username }}</td>
                         <td class="flex flex-row justify-center gap-2 mt-3">
-                            <a href="/admin/dashboard/user/" class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
+                            <a href="/admin/dashboard/user/{{ $user->id }}" class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
                                 <i class="fa-solid fa-address-card"></i>
                                 <span class="hidden lg:inline">Show</span>
                             </a>
-                            <a href="/admin/dashboard/user/id/edit" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
+                            <a href="/admin/dashboard/user/{{ $user->id }}/edit" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
                                 <i class="fa-solid fa-user-pen"></i>
                                 <span class="hidden lg:inline">Edit</span>
                             </a>
-                            <a href="/admin/dashboard/user/" class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
-                                <i class="fa-solid fa-user-minus"></i>
-                                <span class="hidden lg:inline">Delete</span>
-                            </a>
+                            <form action="{{ route('user.destroy', $user->id) }}" method="post">
+                                @method('delete')
+                                @csrf
+                                <button class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150"  data-confirm-delete="true">
+                                    <i class="fa-solid fa-user-minus"></i>
+                                    <span class="hidden lg:inline">Delete</span>
+                                </button>
+                            </form>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="mt-3">2</td>
-                        <td class="mt-3">EranDay</td>
-                        <td class="flex flex-row justify-center gap-2 mt-3">
-                            <a href="/admin/dashboard/user/user" class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
-                                <i class="fa-solid fa-address-card"></i>
-                                <span class="hidden lg:inline">Show</span>
-                            </a>
-                            <a href="/admin/dashboard/user/" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow hover:text-white hover:duration-150">
-                                <i class="fa-solid fa-user-pen"></i>
-                                <span class="hidden lg:inline">Edit</span>
-                            </a>
-                            <a href="/admin/dashboard/user/" class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
-                                <i class="fa-solid fa-user-minus"></i>
-                                <span class="hidden lg:inline">Delete</span>
-                            </a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

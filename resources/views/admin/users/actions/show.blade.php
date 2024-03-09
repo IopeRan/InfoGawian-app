@@ -12,12 +12,24 @@
                 </div>
                 <div class="w-full flex flex-col lg:flex-row lg:justify-between">
                     <div class="flex flex-col text-slate-400 text-sm font-medium">
-                        <span class="lg:text-lg text-white">Erlang Andriyanputra(IopeRan)</span>
+                        <span class="lg:text-lg text-white">{{ $user->fullname }}({{ $user->username }})</span>
+                        @if($user->bio == null)
                         <small class="lg:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi commodi sapiente amet laboriosam. Porro, laudantium!</small>
-                        <small class="lg:text-base">chilliope48@gmail.com</small>
-                        <small class="lg:text-base">085389172080</small>
-                        <small class="lg:text-base">Admin</small>
-                        <small class="lg:text-base">Registered at 03/09/2024</small>
+                        @else
+                        <small class="lg:text-base">{{ $user->bio }}</small>
+                        @endif
+                        @if($user->email == null)
+                        <small class="lg:text-base">email not adding</small>
+                        @else
+                        <small class="lg:text-base">{{ $user->email }}</small>
+                        @endif
+                        @if($user->whatsapp == null)
+                        <small class="lg:text-base capitalize">whatsapp not adding</small>
+                        @else
+                        <small class="lg:text-base capitalize">{{ $user->whatsapp }}</small>
+                        @endif
+                        <small class="lg:text-base capitalize">{{ $user->role }}</small>
+                        <small class="lg:text-base">Registered at {{ $user->created_at }}</small>
                     </div>
                 </div>
                 <div class="mt-4 flex flex-row justify-between gap-3">

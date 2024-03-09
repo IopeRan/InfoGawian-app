@@ -22,7 +22,7 @@
     {{-- <div class="w-ful h-screen flex p-6">
         @include('partials.admin.posts.create')
     </div> --}}
-    
+    @include('sweetalert::alert')
     <script src="{{ asset('js/navside.js') }}"></script>
     <script src="{{ asset('js/createPost.js') }}"></script>
 </body>
