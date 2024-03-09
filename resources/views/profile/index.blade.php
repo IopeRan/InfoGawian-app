@@ -10,7 +10,7 @@
                 <img src="{{ asset('storage/'.$user->image) }}" alt="{{ $user->username }}" class="w-32 h-32 rounded-full object-cover">
             </div>
             <hr class="lg:hidden mt-6">
-            <form action="" method="post" enctype="multipart/form-data" class="py-6 flex flex-col gap-3 w-full">
+            <form action="/profile/{{ auth()->user()->id }}" method="post" enctype="multipart/form-data" class="py-6 flex flex-col gap-3 w-full">
                 @method('put')
                 @csrf
                 <div class="flex flex-col px-6">
