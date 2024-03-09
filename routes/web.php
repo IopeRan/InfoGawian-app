@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddInfoController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardAdminController;
@@ -45,6 +46,9 @@ Route::post('/login', [AuthController::class, 'loginApp']);
 Route::get('/registration', [AuthController::class, 'registration']);
 Route::post('/registration', [AuthController::class, 'registrationApp']);
 Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::put('/add/whatsapp', [AddInfoController::class, 'addWhatsapp']);
+Route::put('/add/email', [AddInfoController::class, 'addEmail']);
 
 Route::middleware(['auth'])->group(function () {
 });

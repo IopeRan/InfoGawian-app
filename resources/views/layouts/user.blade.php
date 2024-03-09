@@ -17,6 +17,7 @@
     </div>
     @include('partials.box')
 
+    @include('sweetalert::alert')
     <script src="{{ asset('js/navbarUser.js') }}"></script>
     <script src="{{ asset('js/profile.js') }}"></script>
     <script src="{{ asset('js/company.js') }}"></script>

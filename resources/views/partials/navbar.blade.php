@@ -14,20 +14,25 @@
                 <a href="/worker" class="{{ $active == 'worker' ? 'text-teal-500' : '' }} font-light"><i class="fa-solid fa-user-nurse"></i> Workers</a>
             </li>
         </ul>
+        @if (auth()->user())            
         <a href="/message" class="font-light relative">
             <i class="fa-solid fa-message"></i> 
             <span class="hidden lg:inline-block">Message</span>
             <div class="absolute left-2 top-2 lg:left-16 lg:top-4 border-2 border-white bg-red-500 w-6 h-6 flex items-center justify-center text-xs text-white rounded-full">9+</div>
         </a>
         <button onclick="profile()" class="flex flex-row gap-3 items-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-10 h-10 rounded-full">
+            <img src="{{ asset('storage/'.auth()->user()->image) }}" alt="{{  asset('storage/'.auth()->user()->image) }}" class="w-10 h-10 rounded-full object-cover">
             <div class="hidden lg:flex">
-                Erlang Andriyanputra
+                {{ auth()->user()->fullname }}
             </div>
         </button>
+        @else
+        <a href="/login">Login</a>
+        @endif
     </div>
 </nav>
 
+@if (auth()->user())    
 <div id="profileDrop" class="bg-white w-max h-max rounded-xl shadow-md fixed right-6 top-16 p-3 hidden">
     <ul class="w-56 font-medium flex flex-col gap-1">
         <li class="flex">
@@ -40,7 +45,8 @@
             <a href="/admin/dashboard" class="w-full px-3 py-2 rounded-lg hover:bg-slate-200 hover:duration-150">Dashboard Admin</a>
         </li>
         <li class="flex">
-            <a href="" class="w-full px-3 py-2 rounded-lg bg-red-500 text-white hover:bg-red-400 hover:duration-150">Logout</a>
+            <a href="/logout" class="w-full px-3 py-2 rounded-lg bg-red-500 text-white hover:bg-red-400 hover:duration-150">Logout</a>
         </li>
     </ul>
 </div>
+@endif

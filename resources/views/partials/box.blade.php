@@ -28,8 +28,10 @@
                 <small class="text-slate-400 lg:text-md">17/08/2024</small>
             </div>
             <hr class="mt-3">
-            <form action="" class="w-full flex flex-col gap-4 mt-4">
-                <input type="number" class="border w-full rounded-xl outline-teal-500 px-3 py-2 shadow-md" placeholder="08xxxxxxx">
+            <form action="/add/whatsapp" method="post" class="w-full flex flex-col gap-4 mt-4">
+                @method('put')
+                @csrf
+                <input type="number" id="whatsapp" name="whatsapp" class="border w-full rounded-xl outline-teal-500 px-3 py-2 shadow-md" placeholder="08xxxxxxx">
                 <div class="flex justify-between">
                     <button type="button" onclick="cancelAddWhatsapp()" class="px-6 py-2 font-medium border-red-500 border text-red-500 rounded-xl hover:bg-red-500 hover:duration-150 hover:text-white">Cancel</button>
                     <button type="submit" class="px-6 py-2 text-white font-medium bg-teal-500 rounded-xl hover:bg-teal-400 hover:duration-150">Save</button>
@@ -49,8 +51,10 @@
                 <small class="text-slate-400 lg:text-md">17/08/2024</small>
             </div>
             <hr class="mt-3">
-            <form action="" class="w-full flex flex-col gap-4 mt-4">
-                <input type="email" class="border w-full rounded-xl outline-teal-500 px-3 py-2 shadow-md" placeholder="example@gmail.com">
+            <form action="/add/email" method="post" class="w-full flex flex-col gap-4 mt-4">
+                @method('put')
+                @csrf
+                <input type="email" id="email" name="email" class="border w-full rounded-xl outline-teal-500 px-3 py-2 shadow-md" placeholder="example@gmail.com">
                 <div class="flex justify-between">
                     <button type="button" onclick="cancelAddEmail()" class="px-6 py-2 font-medium border-red-500 border text-red-500 rounded-xl hover:bg-red-500 hover:duration-150 hover:text-white">Cancel</button>
                     <button type="submit" class="px-6 py-2 text-white font-medium bg-teal-500 rounded-xl hover:bg-teal-400 hover:duration-150">Save</button>
