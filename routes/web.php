@@ -44,6 +44,7 @@ Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'loginApp']);
 Route::get('/registration', [AuthController::class, 'registration']);
 Route::post('/registration', [AuthController::class, 'registrationApp']);
+Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function () {
 });
