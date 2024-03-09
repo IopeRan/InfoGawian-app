@@ -41,7 +41,9 @@ Route::get('/message/company', [MessageController::class, 'company']);
 Route::get('/menu/company', [DashboardCompanyUserController::class, 'index']);
 
 Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'loginApp']);
 Route::get('/registration', [AuthController::class, 'registration']);
+Route::post('/registration', [AuthController::class, 'registrationApp']);
 
 Route::middleware(['auth'])->group(function () {
 });
