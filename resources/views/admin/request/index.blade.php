@@ -34,16 +34,18 @@
                 <th>Action</th>
             </thead>
             <tbody class="">
+                @foreach($company as $company)                    
                 <tr>
-                    <td class="mt-3">1</td>
-                    <td class="mt-3">Chilliope</td>
+                    <td class="mt-3">{{ $company->id }}</td>
+                    <td class="mt-3">{{ $company->company }}</td>
                     <td class="flex flex-row justify-center gap-2 mt-3">
-                        <a href="/admin/dashboard/request/request" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
+                        <a href="/admin/dashboard/request/{{ $company->id }}" class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
                             <i class="fa-solid fa-envelope"></i>
                             <span class="hidden lg:inline">Show</span>
                         </a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

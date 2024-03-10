@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class DashboardRequestController extends Controller
@@ -11,8 +12,10 @@ class DashboardRequestController extends Controller
      */
     public function index()
     {
+        $company = Company::where('status', 'inactive')->paginate(20);
         return view('admin.request.index', [
-            'title' => 'Request'
+            'title' => 'Request',
+            'company' => $company
         ]); 
     }
 
@@ -35,10 +38,12 @@ class DashboardRequestController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
+        $company = Company::where('id', $id)->first();
         return view('admin.request.detail', [
-            'title' => 'Detail'
+            'title' => 'Detail',
+            'company' => $company
         ]);
     }
 
@@ -53,9 +58,16 @@ class DashboardRequestController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'status' => 'required'
+        ]);
+
+        Company::where('id', $id)
+            ->update($validated);
+        
+        return redirect('/admin/dashboard/request')->with('success', 'Company Request Confirmation Success');
     }
 
     /**

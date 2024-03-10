@@ -39,7 +39,7 @@ Route::resource('/profile', ProfileController::class);
 Route::get('/message', [MessageController::class, 'admin']);
 Route::get('/message/company', [MessageController::class, 'company']);
 
-Route::get('/menu/company', [DashboardCompanyUserController::class, 'index']);
+Route::resource('/menu/company', DashboardCompanyUserController::class);
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'loginApp']);

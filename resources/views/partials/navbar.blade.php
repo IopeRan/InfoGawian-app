@@ -15,6 +15,7 @@
             </li>
         </ul>
         @if (auth()->user())            
+        <a href="/jobs" class="{{ $active == 'jobs' ? 'text-teal-500' : '' }} font-light"><i class="fa-solid fa-hammer"></i> Jobs</a>
         <a href="/message" class="font-light relative">
             <i class="fa-solid fa-message"></i> 
             <span class="hidden lg:inline-block">Message</span>

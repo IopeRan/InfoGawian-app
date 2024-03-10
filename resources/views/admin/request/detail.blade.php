@@ -4,8 +4,11 @@
 <h5 class="text-slate-500 font-medium text-xl">Request Company</h5>
 <div class="w-full flex flex-col lg:flex-row gap-4">
     <div class="w-full lg:w-1/2 hidden flex-col lg:flex">
-        <form action="">
-            <button class="mt-6 bg-white w-full h-max rounded-3xl overflow-hidden shadow-md hover:-translate-y-2 hover:duration-150 text-start">
+        <form action="/admin/dashboard/request/{{ $company->id }}" method="post">
+            @method('put')
+            @csrf
+            <input type="hidden" id="status" name="status" value="active">
+            <button type="submit" class="mt-6 bg-white w-full h-max rounded-3xl overflow-hidden shadow-md hover:-translate-y-2 hover:duration-150 text-start">
                 <div class="p-6 flex flex-col">
                     <h6 class="text-slate-500 text-4xl font-medium">Accept</h6>
                     <div class="ml-6 text-slate-500">Accept & Confirm Request</div>
@@ -34,15 +37,15 @@
         <ul class="bg-slate-800 rounded-xl text-teal-500 font-medium flex flex-col gap-3 overflow-hidden">
             <div class="p-4">
                 <h5 class="text-lg font-semibold text-teal-400">Request Statistic Company</h5>
-                <h5>From Erlang Andriyanputra(Chilliope)</h5>
+                <h5>From {{ $company->user->fullname }}({{ $company->user->username }})</h5>
                 <li>
-                    Company: <span class="text-slate-400 font-normal">Pt. Lorem, ipsum dolor.</span>
+                    Company: <span class="text-slate-400 font-normal">{{ $company->company }}</span>
                 </li>
                 <li>
-                    Description: <span class="text-slate-400 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia enim cumque cum asperiores provident. Animi architecto culpa soluta? Nihil recusandae, itaque repellendus consequatur atque, sint facilis placeat libero nesciunt tempore magni quas quae ut voluptatibus optio dicta hic repudiandae? Autem.</span> 
+                    Description: <span class="text-slate-400 font-normal">{{ $company->desc }}</span> 
                 </li>
                 <li>
-                    Rules: <span class="text-slate-400 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quibusdam iusto vel! Corporis blanditiis quisquam placeat, animi porro repellendus similique voluptate dignissimos nisi expedita atque nihil in laudantium maiores assumenda maxime hic autem deleniti excepturi. Doloribus dolor, est alias nesciunt esse at. Hic autem iste fugiat vel? Voluptatem, fugiat saepe!</span>          
+                    Rules: <span class="text-slate-400 font-normal">{{ $company->rules }}</span>          
                 </li>
                 <div class="flex flex-row justify-evenly mt-6 lg:hidden">
                     <a href="/admin/dashboard/request" class="border border-yellow-500 text-yellow-500 px-3 py-2 rounded-xl hover:bg-yellow-500 hover:text-white hover:duration-150">Cancel</a>

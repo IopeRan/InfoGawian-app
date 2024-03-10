@@ -3,7 +3,7 @@
 @section('container')
 <h5 class="text-slate-500 font-bold lg:text-lg">Company</h5>
 <div class="w-full flex flex-col gap-3 lg:flex-row">
-    <div class="w-full flex flex-col">
+<div class="w-full flex flex-col">
         <div class="mt-4 bg-white w-full h-max rounded-3xl shadow-md flex flex-row overflow-hidden">
             <div class="bg-teal-500 w-4"></div>
             <div class="w-full flex flex-col gap-3 p-6">
