@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkerController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,12 +35,14 @@ Route::resource('/admin/dashboard/request', DashboardRequestController::class);
 Route::get('/', [HomeController::class, 'index']);
 Route::resource('/company', CompanyController::class);
 Route::resource('/worker', WorkerController::class);
+Route::resource('/jobs', JobController::class);
 Route::resource('/profile', ProfileController::class);
 
 Route::get('/message', [MessageController::class, 'admin']);
 Route::get('/message/company', [MessageController::class, 'company']);
 
 Route::resource('/menu/company', DashboardCompanyUserController::class);
+
 
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'loginApp']);

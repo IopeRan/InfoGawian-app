@@ -31,27 +31,29 @@
                             <th>Action</th>
                         </thead>
                         <tbody class="">
+                            @foreach ($activeCompany as $company)                                
                             <tr>
-                                <td class="mt-3">1</td>
-                                <td class="mt-3">Chilliope</td>
+                                <td class="mt-3">{{ $company->id }}</td>
+                                <td class="mt-3">{{ $company->company }}</td>
                                 <td class="flex flex-row justify-center gap-2 mt-3">
-                                    <a href="/admin/dashboard/company/company"
+                                    <a href="/admin/dashboard/company/{{ $company->id }}"
                                         class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-eye"></i>
                                         <span class="hidden lg:inline">Show</span>
                                     </a>
-                                    <a href="/admin/dashboard/company/id/edit"
+                                    <a href="/admin/dashboard/company/{{ $company->id }}/edit"
                                         class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                         <span class="hidden lg:inline">Edit</span>
                                     </a>
-                                    <a href="/admin/dashboard/user/"
+                                    <a href="/admin/dashboard/company/"
                                         class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-trash"></i>
                                         <span class="hidden lg:inline">Delete</span>
                                     </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -77,27 +79,29 @@
                             <th>Action</th>
                         </thead>
                         <tbody class="">
+                            @foreach ($inactiveCompany as $company)                                
                             <tr>
-                                <td class="mt-3">1</td>
-                                <td class="mt-3">Chilliope</td>
+                                <td class="mt-3">{{ $company->id }}</td>
+                                <td class="mt-3">{{ $company->company }}</td>
                                 <td class="flex flex-row justify-center gap-2 mt-3">
-                                    <a href="/admin/dashboard/user/"
+                                    <a href="/admin/dashboard/company/{{ $company->id }}"
                                         class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-eye"></i>
                                         <span class="hidden lg:inline">Show</span>
                                     </a>
-                                    <a href="/admin/dashboard/user/id/edit"
+                                    <a href="/admin/dashboard/company/{{ $company->id }}/edit"
                                         class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                         <span class="hidden lg:inline">Edit</span>
                                     </a>
-                                    <a href="/admin/dashboard/user/"
+                                    <a href="/admin/dashboard/company/"
                                         class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
                                         <i class="fa-solid fa-trash"></i>
                                         <span class="hidden lg:inline">Delete</span>
                                     </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
