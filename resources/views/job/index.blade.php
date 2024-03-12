@@ -11,36 +11,13 @@
                     <input type="text" class="bg-white border rounded-l-lg w-full px-3 py-2 outline-teal-500" placeholder="Company">
                     <button class="bg-teal-500 px-3 py-2 rounded-r-lg text-white font-medium hover:bg-teal-400 hover:duration-150"><i class="fa fa-solid fa-search"></i></button>
                 </form>
-                <a href="/company/company" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
+                @foreach ($posts as $post)                    
+                <a href="/jobs/{{ $post->id }}" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
                     <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
+                        <p class="font-medium">{{ $post->title }}</p>
                     </div>
                 </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
+                @endforeach
             </div>
         </div>
     </div>

@@ -8,53 +8,18 @@
             <div class="bg-teal-500 w-4"></div>
             <div class="w-full flex flex-col gap-3 p-6">
             <h5 class="text-slate-500 font-bold my-3 lg:text-lg">Company</h5>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('assets/default-img/company.png') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('assets/default-img/company.png') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('assets/default-img/company.png') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('assets/default-img/company.png') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('assets/default-img/company.png') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Pt.lorem ipsum</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
+            @foreach ($company as $company)                    
+            <a href="/company/{{ $company->id }}" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
+                <div class="w-28 lg:w-max">
+                    <img src="{{ asset('storage/'.$company->image) }}" alt="{{ $company->company }}" class="w-10 h-10 lg:w-20 lg:h-20 object-cover">
+                </div>
+                <div class="flex flex-col text-sm lg:text-base">
+                    <p class="font-medium">{{ $company->company }}</p>
+                </div>
+            </a>
+            @endforeach
                 <div class="flex justify-end mt-4">
-                    <a href="" class="bg-teal-500 px-3 py-2 text-white font-medium rounded-xl hover:bg-teal-400 hover:duration-150">See More</a>
+                    <a href="/company" class="bg-teal-500 px-3 py-2 text-white font-medium rounded-xl hover:bg-teal-400 hover:duration-150">See More</a>
                 </div> 
             </div>
         </div>
@@ -62,53 +27,18 @@
             <div class="bg-teal-500 w-4"></div>
             <div class="w-full flex flex-col gap-3 p-6">
             <h5 class="text-slate-500 font-bold my-3">People</h5>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Erlang Andriyanputra</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Erlang Andriyanputra</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Erlang Andriyanputra</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Erlang Andriyanputra</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
-                <a href="" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
-                    <div class="w-28 lg:w-max">
-                        <img src="{{ asset('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU') }}" alt="" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
-                    </div>
-                    <div class="flex flex-col text-sm lg:text-base">
-                        <p class="font-medium">Erlang Andriyanputra</p>
-                        <p class="text-xs lg:text-sm text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corrupti eum commodi soluta nemo praesentium.</p>
-                    </div>
-                </a>
+            @foreach ($workers as $worker)                    
+            <a href="/worker/{{ $worker->id }}" class="w-full flex flex-row gap-3 hover:-translate-x-2 hover:duration-150">
+                <div class="w-28 lg:w-max">
+                    <img src="{{ asset('storage/'.$worker->image) }}" alt="{{ $worker->username }}" class="w-10 h-10 lg:w-20 lg:h-20 rounded-full">
+                </div>
+                <div class="flex flex-col text-sm lg:text-base">
+                    <p class="font-medium">{{ $worker->fullname }}</p>
+                </div>
+            </a>
+            @endforeach
                 <div class="flex justify-end mt-4">
-                    <a href="" class="bg-teal-500 px-3 py-2 text-white font-medium rounded-xl hover:bg-teal-400 hover:duration-150">See More</a>
+                    <a href="/workers" class="bg-teal-500 px-3 py-2 text-white font-medium rounded-xl hover:bg-teal-400 hover:duration-150">See More</a>
                 </div> 
             </div>
         </div>

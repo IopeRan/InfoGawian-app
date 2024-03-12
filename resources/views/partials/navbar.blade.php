@@ -16,11 +16,11 @@
         </ul>
         @if (auth()->user())            
         <a href="/jobs" class="{{ $active == 'jobs' ? 'text-teal-500' : '' }} font-light"><i class="fa-solid fa-hammer"></i> Jobs</a>
-        <a href="/message" class="font-light relative">
+        {{-- <a href="/message" class="font-light relative">
             <i class="fa-solid fa-message"></i> 
             <span class="hidden lg:inline-block">Message</span>
             <div class="absolute left-2 top-2 lg:left-16 lg:top-4 border-2 border-white bg-red-500 w-6 h-6 flex items-center justify-center text-xs text-white rounded-full">9+</div>
-        </a>
+        </a> --}}
         <button onclick="profile()" class="flex flex-row gap-3 items-center">
             <img src="{{ asset('storage/'.auth()->user()->image) }}" alt="{{  asset('storage/'.auth()->user()->image) }}" class="w-10 h-10 rounded-full object-cover">
             <div class="hidden lg:flex">

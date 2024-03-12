@@ -16,7 +16,7 @@
                         <p class="mt-4">{!! $company->rules !!}</p>
                         <div class="flex justify-end gap-3">
                             <a href="/menu/company/{{ $company->id }}/edit" class="px-3 py-2 bg-teal-500 rounded-lg text-white hover:bg-teal-400 hover:duration-150 mt-6 lg:px-6">Edit</a>
-                            <a href="/post" class="px-3 py-2 bg-teal-500 rounded-lg text-white hover:bg-teal-400 hover:duration-150 mt-6 lg:px-6">Create a Vacancy</a>
+                            <a href="/postJob/create" class="px-3 py-2 bg-teal-500 rounded-lg text-white hover:bg-teal-400 hover:duration-150 mt-6 lg:px-6">Create a Vacancy</a>
                         </div>
                     </div>
                 </div>

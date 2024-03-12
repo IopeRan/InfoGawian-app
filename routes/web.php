@@ -10,6 +10,8 @@ use App\Http\Controllers\DashboardRequestController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkerController;
 use App\Http\Controllers\JobController;
@@ -42,6 +44,7 @@ Route::get('/message', [MessageController::class, 'admin']);
 Route::get('/message/company', [MessageController::class, 'company']);
 
 Route::resource('/menu/company', DashboardCompanyUserController::class);
+Route::resource('/postJob', PostJobController::class);
 
 
 Route::get('/login', [AuthController::class, 'login']);
