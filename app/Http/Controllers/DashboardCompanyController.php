@@ -10,13 +10,19 @@ class DashboardCompanyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $activeCompany = Company::where('status', 'active')
-            ->paginate(20);
+        $activeCompany = Company::when($request->input('active'), function ($query) use ($request) {
+            $query->where('company', 'like', '%' . $request->input('active') . '%');
+        })->orderBy('id', 'desc')->paginate(10);
 
-        $inactiveCompany = Company::where('status', 'inactive')
-            ->paginate(20);
+        $inactiveCompany = Company::when($request->input('inactive'), function ($query) use ($request) {
+            $query->where('company', 'like', '%' . $request->input('inactive') . '%');
+        })->orderBy('id', 'desc')->paginate(10);
+
+        $title = 'Delete Company!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
 
         return view('admin.company.index', [
             'title' => 'Company',
@@ -87,8 +93,11 @@ class DashboardCompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        Company::where('id', $id)
+            ->delete();
+        
+        return redirect()->back()->with('success', 'Company Deleted Successfully');
     }
 }

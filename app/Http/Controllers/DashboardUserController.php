@@ -11,9 +11,11 @@ class DashboardUserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(10);
+        $users = User::when($request->input('username'), function ($query) use ($request) {
+            $query->where('username', 'like', '%' . $request->input('username') . '%');
+        })->orderBy('id', 'desc')->paginate(10);
 
         $title = 'Delete User!';
         $text = "Are you sure you want to delete?";

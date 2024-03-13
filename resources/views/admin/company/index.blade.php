@@ -16,7 +16,7 @@
             <div class="flex flex-col">
                 <form action="" class="my-3">
                     <div class="flex flex-row">
-                        <input type="text" name="" id=""
+                        <input type="text" name="active" id="active"
                             class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-teal-500" placeholder="Keywords">
                         <button
                             class="bg-teal-500 px-3 py-2 text-white rounded-r-lg hover:bg-teal-400 hover:duration-150"><i
@@ -46,11 +46,16 @@
                                         <i class="fa-solid fa-pen-to-square"></i>
                                         <span class="hidden lg:inline">Edit</span>
                                     </a>
-                                    <a href="/admin/dashboard/company/"
-                                        class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
-                                        <i class="fa-solid fa-trash"></i>
-                                        <span class="hidden lg:inline">Delete</span>
-                                    </a>
+                                    <form action="/admin/dashboard/company/{{ $company->id }}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button
+                                            data-confirm-delete="true"
+                                            class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
+                                            <i class="fa-solid fa-trash"></i>
+                                            <span class="hidden lg:inline">Delete</span>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -64,7 +69,7 @@
             <div class="flex flex-col">
                 <form action="" class="my-3">
                     <div class="flex flex-row">
-                        <input type="text" name="" id=""
+                        <input type="text" name="inactive" id="inactive"
                             class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-red-500" placeholder="Keywords">
                         <button
                             class="bg-red-500 px-3 py-2 text-white rounded-r-lg hover:bg-red-400 hover:duration-150"><i
@@ -94,11 +99,16 @@
                                         <i class="fa-solid fa-pen-to-square"></i>
                                         <span class="hidden lg:inline">Edit</span>
                                     </a>
-                                    <a href="/admin/dashboard/company/"
-                                        class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
-                                        <i class="fa-solid fa-trash"></i>
-                                        <span class="hidden lg:inline">Delete</span>
-                                    </a>
+                                    <form action="/admin/dashboard/company/{{ $company->id }}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button
+                                            data-confirm-delete="true"
+                                            class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150">
+                                            <i class="fa-solid fa-trash"></i>
+                                            <span class="hidden lg:inline">Delete</span>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

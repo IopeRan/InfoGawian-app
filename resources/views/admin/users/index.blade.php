@@ -62,7 +62,7 @@
             <h5 class="text-slate-500 text-lg font-medium">List Users</h5>
             <form action="" class="my-3">
                 <div class="flex flex-row">
-                    <input type="text" name="" id="" class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-teal-500" placeholder="Keywords">
+                    <input type="text" name="username" id="username" class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-teal-500" placeholder="Keywords">
                     <button class="bg-teal-500 px-3 py-2 text-white rounded-r-lg hover:bg-teal-400 hover:duration-150"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
@@ -106,16 +106,16 @@
                 <h5 class="text-slate-500 text-lg font-medium">Profile Card</h5>
                 <div class="w-full flex flex-row gap-2 items-center justify-center mt-2 pb-4">
                     <div class="w-16">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUEdlaqIwNG_xq3PtlWjuD_kxkV7ovsmcQ&usqp=CAU" alt="" class="w-14 h-14 rounded-full">
+                        <img src="{{ asset('storage/'.auth()->user()->image) }}" alt="{{ auth()->user()->username }}" class="rounded-full object-cover">
                     </div>
                     <div class="w-full flex flex-col justify-between lg:flex-row">
                         <div>
-                            <p class="text-slate-600 font-medium">Erlang Andriyanputra(IopeRan)</p>
-                            <small class="text-slate-400 font-medium">as admin</small>
-                            <small class="text-slate-400">registered at 03/09/2023</small>
+                            <p class="text-slate-600 font-medium">{{ auth()->user()->fullname }}({{ auth()->user()->username }})</p>
+                            <small class="text-slate-400 font-medium">as {{ auth()->user()->role }}</small>
+                            <small class="text-slate-400">registered at {{ auth()->user()->created_at }}</small>
                         </div>
                         <div class="flex justify-end mt-4">
-                            <a href="" class="w-max h-max px-4 py-2 rounded-xl font-medium border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">Go Profile &raquo;</a>
+                            <a href="/profile" class="w-max h-max px-4 py-2 rounded-xl font-medium border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">Go Profile &raquo;</a>
                         </div>
                     </div>
                 </div>

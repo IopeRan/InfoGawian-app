@@ -23,7 +23,7 @@
         <h5 class="text-slate-500 text-lg font-medium">List Users</h5>
         <form action="" class="my-3">
             <div class="flex flex-row">
-                <input type="text" name="" id="" class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-yellow-500" placeholder="Keywords">
+                <input type="text" name="request" id="request" class="border w-full rounded-l-lg shadow-md px-3 py-2 outline-yellow-500" placeholder="Company Request">
                 <button class="bg-yellow-500 px-3 py-2 text-white rounded-r-lg hover:bg-yellow-400 hover:duration-150"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </form>
