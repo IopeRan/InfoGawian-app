@@ -34,4 +34,43 @@
         @endif
         <svg class="lg:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L48,218.7C96,181,192,107,288,85.3C384,64,480,96,576,138.7C672,181,768,235,864,229.3C960,224,1056,160,1152,133.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </div>
+    <div class="bg-white w-full h-max rounded-3xl shadow-md p-6">
+        <h5>Posts by {{ $company->company }}</h5>
+        <table class="w-full text-center text-sm mt-4 lg:text-base ">
+            <thead class="border-b">
+                <th>ID</th>
+                <th>Title</th>
+                <th>Action</th>
+            </thead>
+            <tbody class="">
+                @foreach ($posts as $post)                                
+                <tr>
+                    <td class="mt-3">{{ $post->id }}</td>
+                    <td class="mt-3">{{ $post->title }}</td>
+                    <td class="flex flex-row justify-center gap-2 mt-3">
+                        <a href="/jobs/{{ $post->id }}"
+                            class="border border-teal-500 rounded-lg p-2 text-teal-500 hover:bg-teal-500 hover:text-white hover:duration-150">
+                            <i class="fa-solid fa-eye"></i>
+                            <span class="hidden lg:inline">Show</span>
+                        </a>
+                        <a href="/postJob/{{ $post->id }}/edit"
+                            class="border border-yellow-500 rounded-lg p-2 text-yellow-500 hover:bg-yellow-500 hover:text-white hover:duration-150">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span class="hidden lg:inline">Edit</span>
+                        </a>
+                        <form action="{{ route('postJob.destroy', $post->id) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button
+                                class="border border-red-500 rounded-lg p-2 text-red-500 hover:bg-red-500 hover:text-white hover:duration-150" data-confirm-delete="true">
+                                <i class="fa-solid fa-trash"></i>
+                                <span class="hidden lg:inline">Delete</span>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection

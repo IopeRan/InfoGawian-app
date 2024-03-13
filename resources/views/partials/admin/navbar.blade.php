@@ -1,3 +1,3 @@
-<nav class="px-6 pt-6 lg:hidden">
-    <button type="button" onclick="openSidebar()" class="text-2xl text-black"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+<nav class="px-6 pt-6">
+    <a href="/" class="text-sky-500 hover:text-sky-400 hover:duration-150">Go Home</a>
 </nav>

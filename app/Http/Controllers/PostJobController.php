@@ -35,4 +35,42 @@ class PostJobController extends Controller
 
         return redirect('/menu/company')->with('success', 'Post Created Successfully');
     }
+
+    public function edit($id)
+    {
+        $user = auth()->user();
+        $company = Company::where('user_id', $user->id)
+            ->first();
+        $post = Post::where('company_id', $company->id)
+            ->orWhere('id', $id)->first();
+
+        return view('post.edit', [
+            'title' => 'Edit Post',
+            'active' => null,
+            'post' => $post
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $rules = [
+            'title' => 'required',
+            'body' => 'required'
+        ];
+
+        $validated = $request->validate($rules);
+
+        Post::where('id', $id)
+            ->update($validated);
+
+        return redirect()->back()->with('success', 'Post Updated Succesfully');
+    }
+
+    public function destroy($id)
+    {
+        Post::where('id', $id)
+            ->delete();
+
+        return redirect()->back()->with('success', 'Post Deleted Successfully');
+    }
 }

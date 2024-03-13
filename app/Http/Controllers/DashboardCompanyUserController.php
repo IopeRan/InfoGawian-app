@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -10,15 +11,23 @@ class DashboardCompanyUserController extends Controller
 {
     public function index()
     {
+        $title = 'Delete Post!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         $user = auth()->user();
         $company = Company::where('user_id', $user->id)
             ->first();
+
+        $posts = Post::where('company_id', $company->id)
+            ->paginate(20);
 
         return view('dashboardCompanyUser.index', [
             'title' => 'Dashboard Company',
             'active' => null,
             'company' => $company,
             'user' => $user,
+            'posts' => $posts
         ]);
     }
 
