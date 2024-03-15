@@ -43,6 +43,7 @@
                 <th>Action</th>
             </thead>
             <tbody class="">
+                @if($posts)
                 @foreach ($posts as $post)                                
                 <tr>
                     <td class="mt-3">{{ $post->id }}</td>
@@ -70,6 +71,7 @@
                     </td>
                 </tr>
                 @endforeach
+                @endif
             </tbody>
         </table>
     </div>
