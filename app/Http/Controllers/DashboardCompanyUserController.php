@@ -14,14 +14,17 @@ class DashboardCompanyUserController extends Controller
         $title = 'Delete Post!';
         $text = "Are you sure you want to delete?";
         confirmDelete($title, $text);
-
+    
         $user = auth()->user();
-        $company = Company::where('user_id', $user->id)
-            ->first();
-
-        $posts = Post::where('company_id', $company->id)
-            ->paginate(20);
-
+    
+        $company = Company::where('user_id', $user->id)->first();
+    
+        $posts = []; 
+    
+        if($company) {
+            $posts = Post::where('company_id', $company->id)->paginate(20);
+        }
+    
         return view('dashboardCompanyUser.index', [
             'title' => 'Dashboard Company',
             'active' => null,
@@ -30,6 +33,7 @@ class DashboardCompanyUserController extends Controller
             'posts' => $posts
         ]);
     }
+    
 
     public function store(Request $request)
     {
